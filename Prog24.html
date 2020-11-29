@@ -1,0 +1,36 @@
+<!--Fecha: 25-08-2020-->
+<!--Autor: Fatima Azucena MC-->
+<!--fatimaazucenamartinez274@gmail.com-->
+
+<!--La CONAGUA requiere determinar el pago que debe realizar una 
+persona por el total de metros cúbicos que consume de agua.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PRECIO DEL AGUA</title>
+	</head>
+<body>
+	<form action="id" id="form">
+	<label>Inserte el precio por metro cubico: </label>
+	<input type="text" name="precio" id="precio"/>
+	<br/>
+	<label>Inserte los metros cubicos de agua consumidos: </label>
+	<input type="text" name="consumido" id="consumido"/>
+        <br/>
+	<button type="button" onclick="calcular();">Mostra total a pagar</button>
+
+	<script type="text/javascript">
+		function calcular(){
+		    var COSTO = document.getElementById("precio");
+		    var CONSUMO = document.getElementById("consumidos");
+
+		    var resultado = (COSTO*CONSUMO);
+		       document.write("El total a pagar por los "+ CONSUMO +" metros cubicos es de: $"+ resultado +" pesos");
+		       console.log("El total a pagar por los "+ CONSUMIDO +" metros consumidos es de: $"+ resultado+" pesos");
+		       alert("El total a pagar por los "+ CONSUMIDO +" metros consumidos es de: $"+ resultado +" pesos");
+		}
+	</script>
+</body>
+</html>

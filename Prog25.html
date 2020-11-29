@@ -1,0 +1,60 @@
+<!--Fecha: 15_10_20-->
+<!--Autor: Fatima Azucena MC-->
+<!--fatimaazucenamartinez274@gmail.com-->
+
+<!--25-Realice un algoritmo que determine el sueldo semanal de N traba­jadores considerando
+que se les descuenta 5% de su sueldo si ganan entre 0 y 150 pesos. Se les descuenta 7% si 
+ganan más de 150 pero menos de 300, y 9% si ganan más de 300 pero menos de 450. Los datos
+son horas trabajadas, sueldo por hora y nombre de cada tra­bajador. Represéntelo mediante 
+diagrama de flujo, pseudocódigo.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>S U E L D O  S E M A N A L</title>
+	</head>
+<body>
+    <form action="" id="form">
+	    <label>Inserte el precio por hora:</label>
+	    <input type="text" name="precio" id="precio"/>
+	    <br/>
+	    <label>Inserte el numero de trabajadores</label>
+	    <input type="text" name="trabajadores" id="trabajadores"/>
+	    <br/>
+	    <button type="button" onclick="sueldo();">M O S T R A R  P A G O  S E M A N A L</button>
+    </form>
+    <script type="text/javascript">
+	    function sueldo(){
+	           var cantidad = document.getElementById("trabajadores").value;
+                   var sueldoBruto = 0;
+		   var sueldoNeto = 0;
+		   for (var i = 1; i <= cantidad; i++){
+		        var nombre = prompt("Inserte el nombre del trabajador "+ i +": ");
+			var hTrabajadas = prompt("Inserte las horas trabajadas de "+ nombre +": ");
+			var dineroGanado = prompt("Inserte el dinero ganado de "+ nombre +": ");
+
+			   if ((dineroGanado > 0)&&(dineroGanado <= 150)){
+				   sueldoBruto=40*(dineroGanado/hTrabajadas);
+				   sueldoNeto=sueldoBruto-(sueldoBruto*0.05);
+			  
+			   }else if ((dineroGanado > 150)&&(dineroGanado <= 300)){
+				   sueldoBruto=40*(dineroGanado/hTrabajadas);
+				   sueldoNeto=sueldoBruto-(sueldoBruto*0.07);
+			   }else if ((dineroGanado > 300)&&(dineroGanado <= 450 )){
+			           sueldoBruto=40*(dineroGanado/hTrabajadas);
+				   sueldoNeto=sueldoBruto-(sueldoBruto*0.09);
+			   }
+
+			   alert("El sueldo bruto de"+ nombre +" es de: $"+ sueldoBruto +" pesos");
+			   document.write(" \n El sueldo bruto de "+ nombre +" es de: $"+ sueldoBruto +" pesos");
+			   console.log("El sueldo bruto de "+ nombre +" es de: $"+ sueldoBruto +" pesos");
+
+			   alert("El sueldo neto de "+ nombre +" es de: $"+ sueldoNeto +" pesos");
+			   document.write(" \n El sueldo neto de "+ nombre +" es de: $"+ sueldoNeto +" pesos");
+			   console.log("El sueldo neto de "+ nombre +" es de: $"+ sueldoNeto +" pesos");
+		   }
+	    }
+    </script>
+</body>
+</html>

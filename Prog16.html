@@ -1,0 +1,49 @@
+<!--Fecha:-->
+<!--Autor:-->
+<!---->
+
+<!--Realice un algoritmo que, con base en una calificación proporciona­da (0-10), indique con letra la calificación que le corresponde: 10 es “A”, 9 es “B”, 8 es “C”, 7 y 6 son “D”, y de 5 a 0 son “F”.-->
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>C A L I F I C A C I O N</title>
+        </head>
+<body>
+	<form="id" id="form">
+	<label>Ingrese su calificacion</label>
+	<input type="text" name="calificacion" id="calificacion"/>
+	<br/>
+	<button type="button" onclick="notas();">Mostrar nota obtenida</button>
+        </form>
+
+        <script type="text/javascript">
+		function notas(){
+		 	var promedio = document.getElementById("calificacion").value;
+			if(promedio == 10){
+				alert("¡Obtuviste una A!");
+				document.write("¡Obtuviste una A!");
+				console.log("¡Obtuviste una A!");
+
+			} else if (promedio == 9){
+				alert("¡Obtuviste una B!");
+				document.write("¡Obtuviste una B!");
+				console.log("¡Obtuviste una B!");
+			} else if (promedio == 8){
+				alert("¡Obtuviste una C!");
+				document.write("¡Obtuviste una C!");
+				console.log("¡Obtuviste una C!");
+			} else if (promedio == 7 && promedio == 6){
+			        alert("¡Obtuviste una D!");
+				document.write("¡Obtuviste una D!");
+				console.log("¡Obtuviste una D!");
+			} else if (promedio <= 5){
+				alert("¡Obtuviste una F!");
+				document.write("¡Obtuviste una F!");
+				console.log("Obtuviste una F");
+
+			}
+		}
+	</script>
+</body>
+</html>
+	                                                                          

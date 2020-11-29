@@ -1,0 +1,39 @@
+<!--Fecha: 02_09_2020-->
+<!--Autor: Fatima Azucena MC-->
+<!--fatimaazucenamartinez274@gmail.com-->
+
+<!--18-Se desea saber el total de una caja registradora de un almacén, se conoce el número de billetes y monedas, así como su valor. Realice un algoritmo para determinar el total. Represente la solución me­diante el diagrama de flujo, el pseudocódigo.-->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>COSTO LLAMADA</title>
+	</head>
+<body>
+	<form action="" id="form">
+	<label>Ingrese el precio por minuto</label>
+	<input type="text" name="precioMinuto" id="precioMinuto"/>
+	<br/>
+	<label>Ingrese los minutos que tomo su llamada</        label> 
+	<input type="text" name="tiempoLlamada" id="tiempoLlamada"/>
+	<br/>
+	<button type="button" onclick="costoLlamada();">
+		Mostrar el costo de la llamada</button>
+
+	<script type="text/javascript">
+	   function costoLlamada(){
+	      var precio = document.getElementById("precioMinuto").value;
+	      var tiempo = document.getElementById("tiempoLlamada").value;
+	      
+              var resultado = precio*tiempo;
+
+		   alert("El costo por su llamada es de: "+resultado," pesos");
+		   document.write("El costo por su llamada es de: "+resultado+" pesos");
+		   console.log("El costo por su llamada es de: "+resultado+" pesos");
+	  
+	   }
+	</script>
+</body>
+</html>

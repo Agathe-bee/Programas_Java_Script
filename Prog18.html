@@ -1,0 +1,81 @@
+<!--Fecha: 21-08-2020-->
+<!--Autor: Fatima Auzena MC-->
+<!--fatimaazucenamartinez274@gmail.com-->
+
+<!--Se desea saber el total de una caja registradora de un almacén, se conoce el número de billetes y monedas, así como su valor. Realice un algoritmo para determinar el total.-->
+
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>CAJA REGISTRADORA</title>
+        </head>
+
+<body>
+	<form action="" id="form">
+		<label>Ingrese la cantidad de billetes de $1000 que tiene: </label>
+		<input type="text" name="mil" id="mil"/>
+		<br/>
+		<label>Ingrese la cantidad de billetes de $500 que tiene: </label>
+		<input type="text" name="quinientos" id="quinientos"/>
+		<br/>
+		<label>Ingrese la cantidad de billetes de $200 que tiene: </label>
+		<input type="text" name="doscientos" id="doscientos"/>
+		<br/>
+		<label>Ingrese la cantidad de billetes de $100 que tiene: </label>
+		<input type="text" name="cien" id="cien"/>
+		<br/>
+		<label>Ingrese la cantidad de billetes de $50 que tiene: </label>
+		<input type="text" name="cincuenta" id="cincuenta"/>
+		<br/>
+		<label>Ingrese la cantidad de billetes de $20 que tiene: </label>
+	        <input type="text" name="veinte" id="veinte"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $10 que tiene: </label>
+		<input type="text" name="diez" id="diez"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $5 que tiene: </label>
+		<input type="text" name="cinco" id="cinco"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $2 que tiene: </label>
+		<input type="text" name="dos" id="dos"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $1 que tiene: </label>
+		<input type="text" name="uno" id="uno"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $0.50 que tiene: </label>
+		<input type="text" name="puntoCinco" id="puntoCinco"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $0.2 que tiene: </label>
+		<input type="text" name="puntoDos" id="puntoDos"/>
+		<br/>
+		<label>Ingrese la cantidad de monedas de $0.1 que tiene: </label>
+	        <input type="text" name="puntoUno" id="puntoUno"/>
+		<br/>
+		<button type="button" onclick="total();">Mostrar el total</button>
+	</form>
+        <script type="text/javascript">
+		function total(){
+			var MIL= document.getElementById("mil").value;
+			var QUINIENTOS= document.getElementById("quinientos").value;
+			var DOSCIENTOS= document.getElementById("doscientos").value;
+			var CIEN= document.getElementById("cien").value;
+			var CINCUENTA= document.getElementById("cincuenta").value; 
+			var VEINTE= document.getElementById("veinte").value;
+			var DIEZ= document.getElementById("diez").value;
+			var CINCO= document.getElementById("cinco").value;
+			var DOS= document.getElementById("dos").value;
+			var UNO= document.getElementById("uno").value;
+			var PUNTOCINCO= document.getElementById("puntoCinco").value;
+			var PUNTODOS= document.getElementById("puntoDos").value;
+			var PUNTOUNO= document.getElementById("puntoUno").value;
+
+			var resultado=(MIL*1000)+(QUINIENTOS*500)+(DOSCIENTOS*200)+(CIEN*100)+(CINCUENTA*50)+(VEINTE*20)+(DIEZ*10)+(CINCO*5)+(DOS*2)+(UNO*1)+(PUNTOCINCO*0.5)+(PUNTODOS*0.2)+(PUNTOUNO*0.1);
+      
+            		
+			document.write("El total de la caja registradora es de: $"+ resultado + " pesos");
+			alert("El total de la caja registradora es de: $"+ resultado + " pesos");
+			console.log("El total de la caja registradora es de: $"+ resultado +" pesos");
+		}
+        </script>
+</body> 
+</html>

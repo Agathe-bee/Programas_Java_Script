@@ -1,0 +1,40 @@
+<!--Fecha: -->
+<!--Autor: -->
+<!--fatimaazucenamartinez274@gmail.com-->
+
+<!--23-Realice un algoritmo para leer las calificaciones de N alumnos y de­termine el número de aprobados y reprobados. Represéntelo me­diante diagrama de flujo, pseudocódigo.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CALIFICACIONES</title>
+	</head>
+<body>
+	<form action="" id="form">
+		<label>Ingrese la cantidad de alumnos que tiene: </label>
+		<input type="text" name="alumnos" id="alumnos"/>
+		<br/>
+		<button type="button" onclick="calificaciones();">Enviar</button>
+
+	<script type="text/javascript">
+	 function calificaciones(){
+		var cantidad = document.getElementById("alumnos").value;
+              
+                for(var i = 1; i <= cantidad; i++){
+			var calificacion = prompt("Ingrese la calificacion del alumno "+i);
+
+			if(calificacion >= 6.0){
+				document.write("Alumno aprobado");
+				alert("Alumno aprobado");
+				console.log("Alumno aprobado");
+			}else {
+				document.write("Alumno no aprobado");
+				alert("Alumno no aprobado");
+				console.log("Alumno no aprobado");
+			}
+		}
+	 }	 
+	</script>
+</body>
+</html>-  
