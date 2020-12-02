@@ -2,55 +2,62 @@
 <!--Autor: Fatima Azucena MC-->
 <!--fatimaAzucenamartinez274@gmail.com-->
 
-<!--Un vendedor ha realizado N ventas y desea saber cuántas fueron por 10,000 o menos, 
-cuántas fueron por más de 10,000 pero por menos de 20,000, y cuánto fue el monto global.-->
+<--Un vendedor ha realizado N ventas y desea saber cuntas fueron por 10000 o menos, cuantas 
+fueron por ms de 10000 pero por menos de 20000, y cunto fue el monto de las ventas de cada 
+una y el monto global. Realice un algoritmo para determinar los totales-->
 
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Ventas</title>
-	</head>
-	<body>
-		<form action="" id="form">
-		<label>Ingrese el numero de ventas: </label>
-		<input type="text" name="ventas" id="ventas"/>
-		<br/>
-		<button type="button" onclick="calcular_Ventas();">Mostrar total</button> 
-	</body>
+        <head>
+                <meta charset="UTF-8">
+                <title>Ventas</title>
+        </head>
+        <body>
+                <form action="" id="form">
+                <label>Ingrese el numero de ventas: </label>
+                <input type="text" name="ventas" id="ventas"/>
+                <br/>
+                <button type="button" onclick="calcular_Ventas();">Mostrar total</button>
+        </body>
 
-	<script type="text/javascript">
-		var venta;
-		var menor;
-		var sumaMayor;
-		var sumaMenor;
-		var cambio;
-		var mayor;
-		var montoGlobal;
-		function calcular_Ventas(){
-			var no_Ventas = document.getElementById("ventas").value;
-			var ventas2 = new Array[no_Ventas];
+        <script type="text/javascript">
+                var venta = 0;
+                var menor = 0;
+                var sumaMayor = 0;
+                var sumaMenor = 0;
+                var cambio = 0;
+                var mayor = 0;
+                var montoGlobal = 0;
+                function calcular_Ventas(){
+                        var no_Ventas = document.getElementById("ventas").value;
+                        var ventas2 = new Array(no_Ventas);
 
-			for (var x = 0; x <= no_Venta; x++){
-				cambio = cambio + 1;
-				var venta = parseFloat(promt("Ingrese el valor de la venta "+ cambio +": "))
-				if ((ventas2[x] > 0) && (ventas2[x] <=10000)){
-					sumaMenor = sumaMenor + ventas2[x];
-					menor += 1;
-				}
-				else if ((vantas2[x] >= 10000) && (ventas[x] <= 20000)){
-					sumaMayor = sumaMAyor + ventas2[x];
-					mayor += 1;
-				}
-			}
+                        for (var x = 0; x <  no_Ventas; x++){
+                                cambio = cambio + 1;
+                                ventas2[x] = parseFloat(prompt("Ingrese el valor de la venta "+ cambio +": "));
+                                montoGlobal = montoGlobal + ventas2[x];:wq
+                                if ((ventas2[x] > 0) && (ventas2[x] <=10000)){
+                                        sumaMenor = sumaMenor + ventas2[x];
+                                        menor += 1;
+                                }
+                                else if ((ventas2[x] > 10000) && (ventas2[x] <= 20000)){
+                                        sumaMayor = sumaMayor + ventas2[x];
+                                        mayor += 1;
+                                }
+                        }
+                         document.write("Usted a realizado "+ menor + " ventas menores a $10000 y la suma de ellas es de: "+ sumaMenor +" pesos");
+                        alert("\n Usted a realizado "+ menor + " ventas menores a $10000 y la suma de ellas es de: "+ sumaMenor +" pesos");
+                        console.log("\n Usted a realizado "+ menor + " ventas menores a $10000 y la suma de ellas es de: "+ sumaMenor +" pesos");
 
-			document.write("Usted a realizado "+ menor + "ventas menores a $10000 y el monto a pagar por ellas es de: "+ sumaMenor +" pesos")
-			alert("Usted a realizado "+ menor + "ventas menores a $10000 y el monto a pagar por ellas es de: "+ sumaMenor +" pesos");
-			console.log("Usted a realizado "+ menor + "ventas menores a $10000 y el monto a pagar por ellas es de: "+ sumaMenor +" pesos");
+                        document.write("\n Usted a realizado "+ mayor + " ventas mayores a $10000 y el monto a pagar por ellas es de: "+ sumaMayor +" pesos");
+                        alert("\n Usted a realizado "+ mayor + " ventas mayores a $10000 y la suma de ellas es de: "+ sumaMayor +" pesos");
+                        console.log("\n Usted a realizado "+ mayor + " ventas mayores a $10000 y la suma de ellas es de: "+ sumaMayor +" pesos");
 
-			document.write("Usted a realizado "+ mayor + "ventas menores a $10000 y el monto a pagar por ellas es de: "+ sumaMayor +" pesos");
-			alert("Usted a realizado "+ mayor + "ventas menores a $10000 y el monto a pagar por ellas es de: "+ sumaMayor +" pesos");
-			console.log("Usted a realizado "+ mayor + "ventas menores a $10000 y el monto a pagar por ellas es de: "+ sumaMayor +" pesos");
-		}
-	</script>
-	</body>
+                        document.write("\n El monto global es de: "+ montoGlobal +" pesos");
+                        alert("\n El monto global es de: "+ montoGlobal +" pesos");
+                        console.log("\n El monto global es de: "+ montoGlobal +" pesos");
+                }
+        </script>
+        </body>
 </html>
+
+
