@@ -6,35 +6,39 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>CALIFICACIONES</title>
-	</head>
+        <head>
+                <meta charset="UTF-8">
+                <title>CALIFICACIONES</title>
+        </head>
 <body>
-	<form action="" id="form">
-		<label>Ingrese la cantidad de alumnos que tiene: </label>
-		<input type="text" name="alumnos" id="alumnos"/>
-		<br/>
-		<button type="button" onclick="calificaciones();">Enviar</button>
+        <form action="" id="form">
+                <label>Ingrese la cantidad de alumnos que tiene: </label>
+                <input type="text" name="alumnos" id="alumnos"/>
+                <br/>
+                <button type="button" onclick="calificaciones();">Enviar</button>
 
-	<script type="text/javascript">
-	 function calificaciones(){
-		var cantidad = document.getElementById("alumnos").value;
-              
-                for(var i = 1; i <= cantidad; i++){
-			var calificacion = prompt("Ingrese la calificacion del alumno "+i);
+        <script type="text/javascript">
+                var cambio = 0;
+                var aprobados = 0;
+                var noAprobados= 0;
 
-			if(calificacion >= 6.0){
-				document.write("Alumno aprobado");
-				alert("Alumno aprobado");
-				console.log("Alumno aprobado");
-			}else {
-				document.write("Alumno no aprobado");
-				alert("Alumno no aprobado");
-				console.log("Alumno no aprobado");
-			}
-		}
-	 }	 
-	</script>
+                function calificaciones(){
+                var cantidad = document.getElementById("alumnos").value;
+                var alumnos = new Array(cantidad);
+                for(var i = 0; i < cantidad; i++){
+                        cambio = cambio + 1;
+                        alumnos[i] = prompt("Ingrese la calificacion del alumno "+ cambio +": ");
+                        if((alumnos[i] >= 6.0)&&(alumnos[i] <=10)){
+                                alert("Alumno aprobado");
+                                aprobados = aprobados + 1;
+                        }else {
+                                alert("Alumno no aprobado");
+                                noAprobados = noAprobados + 1;
+                        }
+                        alert("El total de alumnos aprobados es de: "+ aprobados);
+                        alert("El total de alumnos no aprobados es de: "+ noAprobados);
+                }
+         }
+        </script>
 </body>
-</html>-  
+</html>
