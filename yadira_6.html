@@ -1,0 +1,67 @@
+<!--Fecha: 12_01_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Elabora un programa con condicionales anidados que solicite 3 calificaciones, 
+obtén el promedio de esas tres calificaciones, y de acuerdo al promedio que 
+se obtuvo, coloca la leyenda que le corresponde, que encontraras en la imagen 
+que te comparto con el nombre NIVEL DE DESEMPEÑO-TESJI.JPG.  
+Por ejemplo si tu promedio se encuentra entre 95 y 100 deberá aparecer la 
+leyenda "EXCELENTE" //El documento se encuentra adjunto-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NIVEL DE DESEMPEÑO</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form action="" id="form">
+			<label>Digite la calificacion que obtuvo en Fisica: </label>
+			<input type="text" name="fisica" id="fisica">
+			<br/>
+			<label>Digite la calificacion que obtuvo en Programacion: </label>
+			<input type="text"  name="programacion" id="programacion">
+			<br/>
+			<label>Digite la calificacion que obtuvo en Historia: </label>
+			<input type="text" name="historia" id="historia">
+			<br/>
+			<button type="button" onclick="promedio();">Enviar</title>
+		</form>
+		<script type="java/script">
+			function promedio(){
+				var calificacion_Fisica = document.getElementById("fisica").value;
+				var calificacion_Programacion = document.getElementById("programacion").value;
+				var calificacion_Historia = document.getElementById("historia").value;
+
+				var promedio_General = ( calificacion_Fisica + calificacion_Programacion + calificacion_Historia)/3;
+
+					if (( promedio_General >= 9.5) && ( promedio_General <= 10.0)){
+						alert("EXCELENTE");
+						document("EXCELENTE");
+						console.log("EXCELENTE");
+					}
+						if else (( promedio_General >= 8.5 ) && ( promedio_General <= 9.4)){
+							alert("NOTABLE");
+							document.write("NOTABLE");
+							console.log("NOTABLE");
+						}
+							else if (( promedio_General >= 7.5) && ( promedio_General <= 8.4)){
+								alert("BUENO");
+								document.write("BUENO");
+								console.log("BUENO");
+							}
+								else if (( promedio_General >= 7.0) && ( promedio_General <= 7.4)){
+									alert("SUFICIENTE");
+									document.write("SUFICIENTE");
+									console.log("SUFICIENTE");
+								}
+									else if ( promedio_General <= 7.0){
+										alert("DESEMPEÑO INSUFICIENTE");
+										document.write("DESEMPEÑO INSUFICIENTE");
+										console.log("DESEMPEÑO INSUFICIENTE");
+									}
+			}
+		</script>
+	</body>
+</html>

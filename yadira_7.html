@@ -1,0 +1,67 @@
+<!--Fecha: 12_01_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Elabore un programa que compare 3 numero
+y los ordene de mayor a menor-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Comparacion</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form action="" id="form">
+			<label>Digite el primer numero: </label>
+			<input type="text" name="a" id="a">
+			<br/>
+			<label>Digite el segundo numero: </label>
+                        <input type="text" name="b" id="b">
+                        <br/>
+			<label>Digite el tercer numero: </label>
+                        <input type="text" name="c" id="c">
+                        <br/>
+			<button type="button" onclick="comparacion();">Enviar</button>
+		</form>
+		<script type="java/script">
+			function comparacion(){
+				var numero_1 = document.getElementById("a").value;
+				var numero_2 = document.getElementById("b").value;
+				var numero_3 = document.getElementById("c").value;
+
+				 if ( numero_1 > numero_2 && numero_2 > numero_3){//Inicio condicional if_else
+               				alert(a);
+                			alert(b);
+                			alert(c);
+       				 }
+                			else if( numero_1 > numero_3 && numero_3 > numero_2){
+                        			alert(a);
+                        			alert(b);
+                        			alert(c);
+                			}
+                        			else if ( numero_2 > numero_1 && numero_1 > numero_3){
+                                			alert(b);
+                                			alert(a);
+                                			alert(c);
+                       				 }
+                                			else if ( numero_2 > numero_3 && numero_3 > numero_1){
+                                        			alert(b);
+                                        			alert(c);
+                                        			alert(a);
+                                			}
+                                        			else if ( numero_3 > numero_1 && numero_1 > numero_2){
+                                                			alert(c);
+                                                			alert(a);
+                                                			alert(b);
+                                       				 }
+                                                			else if ( numero_3 > numero_2 && numero_2 > numero_1){
+                                                        			alert(c);
+                                                        			alert(b);
+                                                        			alert(a);
+									}
+
+			}	
+		</script>
+	</body>
+</html>

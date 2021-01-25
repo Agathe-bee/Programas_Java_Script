@@ -1,0 +1,37 @@
+<!--Fecha: 11_01__2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Genere la tabla de multiplicar de un numero N-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabla de multiplicar</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form action="" id="form">
+			<label>¿Que tabla desea ver?: </label>
+			<input type="text" name="tabla" id="tabla">
+			<br/>
+			<label>¿Hasta que numero desea ver?: </label>
+			<input type="text" name="numero" id="numero">
+			</br>
+			<button type="button" onclick="multiplicar();">Enviar</button>
+		</form>
+		<script type="java/script">
+			function multiplicar(){
+				var tablas = document.getElementById("tabla").value;
+				var tope = document.getElementById("numero").value;
+
+				for ( var i = 1; i <= tope; i++){
+					var resultado = tablas * i;
+					alert(tablas + " x " + i + " = " + resultado);
+					document.write(tablas + " x " + i + " = " + resultado);
+					console.log(tablas + " x " + i + " = " + resultado);
+				}
+			}
+		</script>
+	</body>
+</html>

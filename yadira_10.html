@@ -1,0 +1,49 @@
+<!--Fecha: 10_01_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail,com-->
+
+<!--Calcule la sumatoria de N numeros-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Suma</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form action="" id="form">
+			<label>Digite el numero 1: </label>
+			<input type="text" name="valor_1" id="valor_1">
+			<br/>
+			<label>Digite el numero 2: </label>
+                        <input type="text" name="valor_2" id="valor_2">
+                        <br/>
+			<label>Digite el numero 3: </label>
+                        <input type="text" name="valor_3" id="valor_3">
+                        <br/>
+			<label>Digite el numero 4: </label>
+                        <input type="text" name="valor_4" id="valor_4">
+                        <br/>
+			<label>Digite el numero 5: </label>
+                        <input type="text" name="valor_5" id="valor_5">
+                        <br/>
+			<button type="button" onclick="suma();">Enviar</button>
+		</form>
+		<script type="java/script">
+			function suma(){
+				var numero_1 = document.getElementById("valor_1").value;
+				var numero_2 = document.getElementById("valor_2").value;
+		                var numero_3 = document.getElementById("valor_3").value;
+			        var numero_4 = document.getElementById("valor_4").value;
+				var numero_5 = document.getElementById("valor_5").value;
+
+				var sumatoria = numero_1 + numero_2 + numero_3 + numero_4 + numero_5;
+
+				alert("La sumatoria es "+ sumatoria);
+				document.write("La sumatoria es "+ sumatoria);
+				console.log("La sumatoria es "+ sumatoria);
+			}
+		</script>
+	</body>
+</html>
+
