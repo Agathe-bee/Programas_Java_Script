@@ -20,7 +20,7 @@
 			</br>
 			<button type="button" onclick="multiplicar();">Enviar</button>
 		</form>
-		<script type="java/script">
+		<script type="text/javascript">
 			function multiplicar(){
 				var tablas = document.getElementById("tabla").value;
 				var tope = document.getElementById("numero").value;
@@ -28,7 +28,6 @@
 				for ( var i = 1; i <= tope; i++){
 					var resultado = tablas * i;
 					alert(tablas + " x " + i + " = " + resultado);
-					document.write(tablas + " x " + i + " = " + resultado);
 					console.log(tablas + " x " + i + " = " + resultado);
 				}
 			}

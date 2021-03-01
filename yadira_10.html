@@ -29,19 +29,18 @@
                         <br/>
 			<button type="button" onclick="suma();">Enviar</button>
 		</form>
-		<script type="java/script">
+		<script type="text/javascript">
 			function suma(){
-				var numero_1 = document.getElementById("valor_1").value;
-				var numero_2 = document.getElementById("valor_2").value;
-		                var numero_3 = document.getElementById("valor_3").value;
-			        var numero_4 = document.getElementById("valor_4").value;
-				var numero_5 = document.getElementById("valor_5").value;
-
-				var sumatoria = numero_1 + numero_2 + numero_3 + numero_4 + numero_5;
+				var numero_1 = parseInt (document.getElementById("valor_1").value);
+				var numero_2 = parseInt (document.getElementById("valor_2").value);
+		                var numero_3 = parseInt (document.getElementById("valor_3").value);
+			        var numero_4 = parseInt (document.getElementById("valor_4").value);
+				var numero_5 = parseInt (document.getElementById("valor_5").value);
+				var sumatoria;
+			
+				sumatoria = numero_1 + numero_2 + numero_3 + numero_4 + numero_5;
 
 				alert("La sumatoria es "+ sumatoria);
-				document.write("La sumatoria es "+ sumatoria);
-				console.log("La sumatoria es "+ sumatoria);
 			}
 		</script>
 	</body>

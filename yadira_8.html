@@ -11,7 +11,7 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<form action="" id="form">
+		<form="id" id="form">
 			<label>Digite la edad del alumno 1: </label>
 			<input type="text" name="a" id="a">
 			<br/>
@@ -27,21 +27,19 @@
 			<label>Digite la edad del alumno 5: </label>
                         <input type="text" name="e" id="e"> 
                         <br/>
-			<button type="button" onclick="porcentaje();">Enviar</title>
+			<button type="button" onclick="porcentaje();">Enviar</button>
 		</form>
-		<script type="java/script">
+		<script type="text/javascript">
 			function porcentaje(){
-				var alumno_1 = document.getElementById("a").value;
-				var alumno_2 = document.getElementById("b").value;
-				var alumno_3 = document.getElementById("c").value;
-				var alumno_4 = document.getElementById("d").value;
-				var alumno_5 = document.getElementById("e").value;
-
-				var suma_Edades = ( alumno_1 + alumno_2 + alumno_3 + alumno_4 + alumno_5)/5;
+				var alumno_1= parseInt (document.getElementById("a").value);
+				var alumno_2 = parseInt (document.getElementById("b").value);
+				var alumno_3 = parseInt (document.getElementById("c").value);
+				var alumno_4 = parseInt (document.getElementById("d").value);
+				var alumno_5 = parseInt (document.getElementById("e").value);
+				var suma = alumno_1 + alumno_2 + alumno_3 + alumno_4 + alumno_5;
+				var suma_Edades = suma/5;
 
 				alert("El porcentaje de las edades es: "+ suma_Edades +"%");
-				document.write("El porcentaje de las edades es: "+ suma_Edades +"%");
-				console.log("El porcentaje de las edades es: "+ suma_Edades +"%");
 			}
 		</script>
 	</body>

@@ -14,7 +14,43 @@ LES OTORGARÁN UN DESCUENTO DEL 20% DEL TOTAL DE SU COMPRA.-->
 	</head>
 	<body>
 		<form action="" id="form">
-			<
+			<label>¿Como te llamas? :</label>
+			<input type="text" name="usr" id="usr">
+			<br/>
+			<button type="button" onclick="resultado();">Enviar</button>
 		</form>
+		<script type="text/javascript">
+		function resultado(){
+			var nombre = document.getElementById("usr").value;
+			var numVentas;
+			var tarjeta;
+			var precio;
+			var total_precio = 0;
+			var continuar;
+			
+			do{
+				alert("Hola " + nombre + " bienvenido a la tienda departamental");
+				numVentas = parseInt(prompt("¿Cuantas ventas realizaste?: "));
+				tarjeta = parseInt(prompt("¿Cuantas con tarjeta de cliente frecuente?\n1)Si\n0)No"));
+
+				if ( tarjeta == 1){
+					for ( var i = 1; i <= numVentas; i++){
+					precio = parseFloat(prompt("Digita el costo de la venta " + i));
+					total_precio = total_precio + precio;
+					}
+					descuento = total_precio * 0.20;
+					alert("El monto de tu venta es de: " + total_precio + " pesos");
+				}
+					else if ( tarjeta == 0){
+						for ( var i = 1; i <= numVentas; i++){
+                                        		precio = parseFloat(prompt("Digita el costo de la venta " + i));
+                                        		total_precio = total_precio + precio;
+                                        	}
+						alert("El monto de tu venta es de: " + total_precio + " pesos");
+					}
+				continuar = parseInt(prompt("¿Deseas volver al menu?\n1)Si\n0)No"));
+			}while (continuar == 1);
+		}
+		</script>
 	</body>
 </html>

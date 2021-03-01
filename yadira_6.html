@@ -16,51 +16,42 @@ leyenda "EXCELENTE" //El documento se encuentra adjunto-->
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<form action="" id="form">
+		<form="id" id="form">
 			<label>Digite la calificacion que obtuvo en Fisica: </label>
-			<input type="text" name="fisica" id="fisica">
+			<input type="text" name="fisica" id="fisica"/>
 			<br/>
 			<label>Digite la calificacion que obtuvo en Programacion: </label>
-			<input type="text"  name="programacion" id="programacion">
+			<input type="text"  name="programacion" id="programacion"/>
 			<br/>
 			<label>Digite la calificacion que obtuvo en Historia: </label>
-			<input type="text" name="historia" id="historia">
+			<input type="text" name="historia" id="historia"/>
 			<br/>
-			<button type="button" onclick="promedio();">Enviar</title>
+			<button type="button" onclick="promedio();">Enviar</button>
 		</form>
-		<script type="java/script">
+		<script type="text/javascript">
 			function promedio(){
-				var calificacion_Fisica = document.getElementById("fisica").value;
-				var calificacion_Programacion = document.getElementById("programacion").value;
-				var calificacion_Historia = document.getElementById("historia").value;
+				var calificacion_Fisica = parseInt (document.getElementById("fisica").value);
+				var calificacion_Programacion = parseInt (document.getElementById("programacion").value);
+				var calificacion_Historia = parseInt (document.getElementById("historia").value);
 
 				var promedio_General = ( calificacion_Fisica + calificacion_Programacion + calificacion_Historia)/3;
 
-					if (( promedio_General >= 9.5) && ( promedio_General <= 10.0)){
+					if (( promedio_General > 9.5) && ( promedio_General < 10.0)){
 						alert("EXCELENTE");
-						document("EXCELENTE");
-						console.log("EXCELENTE");
 					}
-						if else (( promedio_General >= 8.5 ) && ( promedio_General <= 9.4)){
-							alert("NOTABLE");
-							document.write("NOTABLE");
-							console.log("NOTABLE");
-						}
-							else if (( promedio_General >= 7.5) && ( promedio_General <= 8.4)){
-								alert("BUENO");
-								document.write("BUENO");
-								console.log("BUENO");
-							}
-								else if (( promedio_General >= 7.0) && ( promedio_General <= 7.4)){
-									alert("SUFICIENTE");
-									document.write("SUFICIENTE");
-									console.log("SUFICIENTE");
-								}
-									else if ( promedio_General <= 7.0){
-										alert("DESEMPEÑO INSUFICIENTE");
-										document.write("DESEMPEÑO INSUFICIENTE");
-										console.log("DESEMPEÑO INSUFICIENTE");
-									}
+
+					else if(( promedio_General >= 8.5 ) && ( promedio_General <= 9.4)){
+						alert("NOTABLE");
+					}
+					else if (( promedio_General > 7.5) && ( promedio_General < 8.4)){
+							alert("BUENO");
+					}
+					else if (( promedio_General > 7.0) && ( promedio_General < 7.4)){
+							alert("SUFICIENTE");
+					}
+					else if ( promedio_General < 6.0){
+							alert("DESEMPEÑO INSUFICIENTE");
+					}
 			}
 		</script>
 	</body>

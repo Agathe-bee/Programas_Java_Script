@@ -1,0 +1,37 @@
+<!--Fecha: 01_02_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Solicite la edad y calcule si es mayor de edad-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Edad</title>
+	</head>
+	<body>
+		<form="id" id="form">
+			<label>Digite su edad: </label>
+			<input type="text" name="valor" id="valor">
+			<br/>
+			<button type="button" onclick="calculo();">Enviar</button>
+		</form>
+		<script type="text/javascript">
+			function calculo(){
+				var edad = document.getElementById("valor").values;
+
+				if ( edad > 18){
+					alert("Usted es mayor de edad");
+					document.write("Usted es mayor de edad");
+					console.log("Usted es mayor de edad");
+				} else {
+					alert("Usted no es mayor de edad");
+                                        document.write("Usted es no mayor de edad");
+                                        console.log("Usted es no mayor de edad");
+				}
+			}
+		</script>
+	</body>
+</html>
+

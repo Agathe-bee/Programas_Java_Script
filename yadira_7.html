@@ -24,41 +24,29 @@ y los ordene de mayor a menor-->
                         <br/>
 			<button type="button" onclick="comparacion();">Enviar</button>
 		</form>
-		<script type="java/script">
+		<script type="text/javascript">
 			function comparacion(){
 				var numero_1 = document.getElementById("a").value;
 				var numero_2 = document.getElementById("b").value;
 				var numero_3 = document.getElementById("c").value;
 
 				 if ( numero_1 > numero_2 && numero_2 > numero_3){//Inicio condicional if_else
-               				alert(a);
-                			alert(b);
-                			alert(c);
+               				alert(numero_1 + " " + numero_2 + " " + numero_3);
        				 }
                 			else if( numero_1 > numero_3 && numero_3 > numero_2){
-                        			alert(a);
-                        			alert(b);
-                        			alert(c);
+                        			alert(numero_1 + " " + numero_2 + " " + numero_3);
                 			}
                         			else if ( numero_2 > numero_1 && numero_1 > numero_3){
-                                			alert(b);
-                                			alert(a);
-                                			alert(c);
+                                			alert(numero_2 + " " + numero_1 + " " + mumero_3);
                        				 }
                                 			else if ( numero_2 > numero_3 && numero_3 > numero_1){
-                                        			alert(b);
-                                        			alert(c);
-                                        			alert(a);
+                                        			alert(numero_2 + " " + numero_3 + " " + numero_1);
                                 			}
                                         			else if ( numero_3 > numero_1 && numero_1 > numero_2){
-                                                			alert(c);
-                                                			alert(a);
-                                                			alert(b);
+                                                			alert(numero_3 + " " + numero_1 + " " + numero_2);
                                        				 }
                                                 			else if ( numero_3 > numero_2 && numero_2 > numero_1){
-                                                        			alert(c);
-                                                        			alert(b);
-                                                        			alert(a);
+                                                        			alert(numero_3 + " " + numero_2 + " " + numero_1);
 									}
 
 			}	

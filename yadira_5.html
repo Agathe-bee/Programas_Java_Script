@@ -1,0 +1,70 @@
+<!--Fecha: 28_02_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--EN EL TECNOLÓGICO NACIONAL DE MEXICO SE PUBLICÓ UNA
+CONVOCATORIA DE ESTUDIOS EN EL EXTRANJERO, PODRÁN PARTICIPAR AQUELLOS
+ESTUDIANTES QUE TENGAN UN PROMEDIO MAYOR A 90. LOS ALUMNOS QUE HAYAN
+ALCANZADO LA CALIFICACIÓN ENTRARÁN DIRECTO A LA TÓMBOLA PARA EL SORTEO.
+LOS ALUMNOS QUE NO ALCANCEN EL PROMEDIO PODRÁN PARTICIPAR EN LA SIGUIENTE
+CONVOCATORIA SI APRUEBAN EL EXAMEN DEL IDIOMA PARA EL SIGUIENTE SEMESTRE
+Y MEJORAN EN UN 20% SU PROMEDIO-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Convocatoria</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var calificacion;
+			var registro;
+			var examen_idiomas;
+			var continuar;
+			do{
+				alert("B I E N V E N I D O S");
+				registro = parseInt(prompt("¿Vas a registrarte por primera vez?\n1)Si\n2)No"));
+
+				switch (registro){
+					case 1:
+						
+						calificacion = parseInt(prompt("Digita tu calificacion (10-100): "));
+						
+						if (calificacion > 90){
+							alert("Felicidades haz entrado a la tombola directamente");
+						}
+						else {
+							alert("No puedes entrar debido a tu calificaion, suerte para la proxima");
+						}
+
+					break;
+					case 2:
+						alert("Tu ya haz participado anteriormermente, el requisito ahora para que puedas entrar es: pasar"+ 						       "\nexamen de idiomas y mejorar un 20 porciento en tu calificacion anterior");
+
+						examen_idiomas = parseInt(prompt("¿Pasaste el examen de idiomas?:\n1)Si\n0)No"));
+
+						if (examen_idiomas == 1){
+							calificacion = parseInt(prompt("Digita tu calificacion (10-100): "));
+
+							if (calificacion > 90){
+								alert("Felicidades, haz entrado a la tombola");
+							}
+							else {
+								alert("Lo sentimos, no puedes entrar a la tobmola, pasaste el examen de idiomas pero"+ 								      "\nno tuviste una calificación mayor a 90");
+							}
+
+						}
+						else if (examen_idiomas == 0){
+								alert("Lo sentimos, no puedes entrar a la tombola, pasar el examen era un requisito");
+						}
+					break;
+				}
+				continuar = parseInt(prompt("¿Que desea hacer?:\n1)Volver al menu\n0)Salir"));
+			}while (continuar == 1);
+			alert("Hasta la proxima");
+		</script>
+	</body>
+</html>
+
+

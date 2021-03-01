@@ -1,0 +1,57 @@
+<!--Fecha: 12_02_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--UN PROGRAMA SOLICITA QUE SEAN CAPTURADOS TRES DATOS
+NUMÉRICOS Y A PARTIR DE ELLOS IMPRIMIRÁ SI EL NÚMERO ES PAR-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Numero par o impar</title>
+	</head>
+	<body>
+		<form="id" id="form">
+			<label>Digite el primer numero: </label>
+			<input type="text" name="valor_1" id="valor_1">
+			<br>
+			<label>Digite el segundo numero: </label>
+                        <input type="text" name="valor_2" id="valor_2">
+			<br>
+			<label>Digite el tercer numero: </label>
+                        <input type="text" name="valor_3" id="valor_3">
+			<br>
+			<button type="button" onclick="pares();">Enviar</button>
+		</form>
+		<script type="text/javascript">
+			function pares(){
+				var numero_1 = document.getElementById("valor_1").value;
+				var numero_2 = document.getElementById("valor_2").value;
+				var numero_3 = document.getElementById("valor_3").value;
+
+				if ( numero_1%2==0){
+                			alert("El número "+ numero_1+ " es par");
+        			}
+        			else {
+                			alert("El numero "+ numero_1 +" es impar");
+        			}
+
+        			if ( numero_2%2==0){
+                			alert("El número "+ numero_2 +" es par");
+        			}
+        			else {
+                			alert("El numero "+ numero_2 +" es impar");
+        			}
+
+        			if ( numero_3%2==0){
+                			alert("El número "+ numero_3 +" es par");
+        			}
+        			else {
+                			alert("El numero "+ numero_3 +" es impar");
+        			}
+
+			}
+		</script>
+	</body>
+</html>

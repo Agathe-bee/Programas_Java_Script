@@ -1,0 +1,33 @@
+<!--Fecha: 12_02_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Genera un programa que determine si la calificación es aprobatoria o no-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>C A L I F I C A C I O N</title>
+
+	</head>
+	<body>
+		<form="id" id="form">
+			<label>Ingrese su calificacion (1-10): </label>
+			<input type="text" name="promedio" id="promedio"/>
+			<br>
+			<button type="button" onclick="nota();">Enviar</button>
+		</form>
+		<script type="text/javascript">
+			function nota(){
+				var calificacion = document.getElementById("promedio").value;
+
+				if ( calificacion > 6 ){
+					alert("Tu calificacion es aprobatoria");
+				} else {
+					alert("Tu calificacion no es aprobatoria");
+				}
+			}
+		</script>
+	</body>
+</html>

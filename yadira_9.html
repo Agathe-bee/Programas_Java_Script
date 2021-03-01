@@ -1,0 +1,32 @@
+<!--Fecha: 01_01_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Genere el factorial de un número-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Factorial</title>
+	</head>
+	<body>
+		<form="id" id="form">
+			<label>Digite un numero: </label>
+			<input type="text" name="fac" id="fac"/>
+			<br/>
+			<button type="button" onclick="calculo();">Enviar</button>
+		</form>
+		<script type="text/javascript">
+			function calculo(){
+				var factorial = document.getElementById("fac").value;
+				var numero_Factorial = 1;
+				for ( var i = 1; i <= factorial; i++){
+					 numero_Factorial = numero_Factorial * i;
+
+				}	
+				alert("El factorial de " + factorial + " es: " + numero_Factorial);
+			}
+		</script>
+	</body>
+</html>
