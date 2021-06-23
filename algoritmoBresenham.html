@@ -1,0 +1,64 @@
+<!--Fecha: 21_06_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>Algoritmo Bresenham</title>
+        </head>
+        <body>
+                <form action="" id="form">
+                        <label>Digite el valor de la coordenada x1: </label>
+                        <input type="text" name="var1" id="var1">
+			<br/>
+                        <label>Digite el valor de la coordenada y1: </label>
+                        <input type="text" name="var2" id="var2">
+                        <br/>
+                        <label>Digite el valor de la coordenada x2: </label>
+                        <input type="text" name="var3" id="var3">
+                        <br/>
+                        <label>Digite el valor de la coordenada y2: </label>
+                        <input type="text" name="var4" id="var4">
+                        <br/>
+                        <button type="button" onclick="resultado();">Enviar</button>
+                </form>
+		
+		<script type="text/javascript">
+			function resultado(){
+				var x1 = document.getElementById('var1').value;
+                        	var y1 = document.getElementById('var2').value;
+                        	var x2 = document.getElementById('var3').value;
+                        	var y2 = document.getElementById('var4').value;
+				var x;
+				var y;
+				var dx;
+				var dy;
+				var p;
+
+				x = x1;
+				y = y1;
+
+				dx = x2 - x1;
+				dy = y2 - y1;
+				p = (2*dy) - dx;
+
+				while ( x <= x2){
+					alert("X: " + x + " Y: " + y + "\n");
+					x += 1;
+					if ( p < 0){
+						p = p + 2 * dy;
+					}
+					else {
+						p = p + (2 * dy) - (2 * dx);
+						y += 1;
+					}
+				
+				}
+			}
+		</script>
+	<body>
+<html>
+
+

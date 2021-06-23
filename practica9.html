@@ -1,0 +1,29 @@
+<!--Fecha: 26_05_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM</title>
+		<style>
+			span {font-weight: bold}
+		</style>
+	</head>
+	<body>
+		<h1>Propiedades de window</h1>
+		La propiedad location.href contiene el URL:
+		<br>
+		<span id="i1"></span>
+		<p>
+			Los pixeles de mi pantalla (screen.width y screen.height) son:
+			<span id="i2"></span>
+
+		<script>
+			document.getElementById("i1").innerHTML = location.href;
+			var p = document.getElementById("i2");
+			p.innerHTML = screen.width + " x " + screen.heigth;
+		</script>
+	</body>
+</html>

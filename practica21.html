@@ -1,0 +1,27 @@
+<!--Fecha: 02_06_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Reloj</title>
+
+				<script type="text/javascript">
+					function mostrar_fecha(){
+						var cl = document.getElementById("fecha");
+						cl.innerHTML = new Date();
+					}
+				</script>
+	</head>
+	<body>
+		<h2> Reloj </h2>
+		<div id="fecha"></div>
+
+				<script type="text/javascript">
+					mostrar_fecha();
+					setInterval(mostrar_fecha, 1000);
+				</script>
+	</body>
+</html>

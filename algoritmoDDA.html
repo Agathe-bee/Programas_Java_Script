@@ -1,0 +1,66 @@
+<!--Fecha: 21_06_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Algoritmo DDA</title>
+	</head>
+	<body>
+		<form action="" id="form">
+			<label>Digite el valor de la coordenada x1: </label>
+			<input type="text" name="var1" id="var1">
+			<br/>
+			<label>Digite el valor de la coordenada y1: </label>
+                        <input type="text" name="var1" id="var2">
+                        <br/>
+			<label>Digite el valor de la coordenada x2: </label>
+                        <input type="text" name="var1" id="var3">
+                        <br/>
+			<label>Digite el valor de la coordenada y2: </label>
+                        <input type="text" name="var1" id="var4">
+                        <br/>
+			<button type="button" onclick="resultado();">Enviar</button>
+		</form>
+
+		<script type="text/javascript">
+			function resultado(){
+/				var x1 = document.getElementById("var1").value;
+				var y1 = document.getElementById("var2").value;
+				var x2 = document.getElementById("var3").value;
+                                var y2 = document.getElementById("var4").value;
+				var dx;
+				var dy;
+				var steps;
+				var xinc;
+				var steps;
+				var yinc;
+				var i;
+
+				dx = Math.abs(x2-x1);
+				dy = Math.abs(y2-y1);
+
+				if ( dx > dy ){
+					steps = dx;
+				}
+				else {
+					steps = dy;
+				}
+				
+				xinc = dx / steps;
+				yinc = dy / steps;
+
+				for (i = 0; i <= steps; i++){
+					alert("X: " + x1  + " Y: " + y1 + "\n");
+					console.log("X: " + x1  + " Y: " + y1 + "\n");
+					x1 = x1 + xinc;
+					y1 = y1 + yinc;
+				}
+			}
+		</script>
+	</body>
+</html>
+
+

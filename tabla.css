@@ -1,0 +1,73 @@
+/*
+Fecha: 16_04_2021
+Autor: Fatima Azucena MC
+Correo: fatimaazucenamartinez274@gmail.com
+*/
+
+body {
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        background-color: #f2f3f4 ;
+}
+a {
+        color: #7B1BA7;
+}
+a:hover {
+        border-collapse: collapse;
+        border: 2px solid gray;
+        table-layout: fixed;
+        width: 100%;
+}
+table {
+        border-collapse:collapse;
+        border: 2px solid gray;
+        table-layout: fixed;
+        width: 100%;
+}
+td {
+        padding: 5px;
+        border: 1px solid gray;
+}
+th {
+        color: white;
+        background-color: gray;
+ 	padding: 5px;
+}
+tr {
+        height: 45px;
+}
+.titulo {
+        font-family: 'Rock Salt', cursive;
+        font-size: 20px;
+        line-height: 30px;
+        background-color: #5d6d7e;
+        color:  #e5e8e8;
+        text-align: center;
+        font-style: normal;
+}
+.normal {
+        font-family: 'Rock Salt', cursive;
+        font-size: 14px;
+        line-height: 20px;
+ 	font-weight: bold;
+        color:  #34495e ;
+        font-style: normal;
+        text-align: justify;
+}
+.derecha {
+        font-family: 'Rock Salt', cursive;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        color:  #34495e ;
+        font-style: normal;
+        text-align: center;
+}
+.estilo24 {
+        font-size: 24pt;
+        color: #273746;
+}
+
+

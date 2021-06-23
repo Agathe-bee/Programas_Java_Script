@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Conversion de medidas</title>
+		<link rel="stylesheet" href="diseño.css">
+	</head>
+	<body>
+		<section id="main-content">
+			<article>
+				<header>
+					<h1>¡Aprende a hacer conversiones de medida en C!</h1>
+				</header>
+			
+				<img src="cabecera.jpg">
+				<p>
+				En esta página web les enseñare como hacer conversiones de medidas de longuitud, antes de empezar
+				las unidades de longuitud es una cantidad estandarizada de longuitud definida por convención.
+				<br/>
+				La longuitud es una magnitud fundamental entre 2 puntos.
+				<br/>
+				Las más conocidas son:
+				<br/>
+				<center>
+					1.- Milimetro.
+					<br/>
+					2.- Centimetro.
+					<br/>
+					3.- Pulgada.
+					<br/>
+					4.- Pie.
+					<br/>
+					5.- Yarda.
+					<br/>
+					6.- Metro.
+					<br/>
+					7.- Kilometro.
+					<br/>
+					8.- Milla.
+				</p>
+				</center>
+				<div style="border : solid 2px #ff0000;
+           	 			background : #000000;
+            				color : #ffffff;
+            				padding : 4px;
+           	 			width : 750px;
+            				height : 200px;
+            					overflow : auto; ">
+				
+<pre>
+1 <tt>/*
+2 Fecha: 7_04_2021
+3 Autor: Fátima Azucena MC
+4 Correo: fatimaazucenamartinez274@gmial.com
+5 */
+6 #include <stdio>
+
+7 typedef char String[25];
+8 void desprender_menu(int valor);
+9 String nombres[10][8] = {
+10	{"mm","cm","in","ft","y","m","km","mi"},
+11	{"m^2","ft^2","mi^2","acre","No válido","No válido","No válido","No válido"},
+12	{"litro","m^3","ft^3","galon americano","galon britanico","No válido","No válido","No válido"},
+13	{"kg","lb","gm","slug","No válido","No válido","No válido","No válido"},
+14	{"km/hr","mi/hr","p/s","m/s","No válido","No válido","No válido","No válido"},
+15	{"gm/cm^3","lb/ft^3","kg/m^3","slug/ft^3","No válido","No válido","No válido","No válido"},
+16	{"N","lbf","kgf","dinas","No válido","No válido","No válido","No válido"},
+17	{"J","Nm","cal","Btu","lbf/ft","w/hr","kw/hr","eV"},
+18	{"w","j/s","erg/s","cal/h","hp","kw","btu/s","No válido"},
+19	{"N/m^2","lbf/in^2","atm","d/cm^2","lbf/ft^2","pulgada de agua","No válido","No válido"},
+20 };
+21 double valores[10][8] = {
+22	{1000,100,41.66,3.28083,1.09,0.001,0.0006215},
+23	{0.0929,1,0.000087,0.000022957},
+24	{1,0.001,0.0353147,61.0237,1.05696,0.264172,0.219969},
+25	{0.453592,1,453.59,0.031},
+26	{1,0.6213,0.91134,0.2777},
+27	{1,62.428,1000,1.94032},
+28	{1,0.2248,0.101972,100000},
+29	{4184,1,1000,3.96567,3085.96,1.16222,0.00116222,2670.68},
+30	{745.7,745.7,7456998715.823,8437231,1,0.7457,0.706787},
+31	{1,0.000145,0.0000098,10,0.02088,0.000750,0.00401}
+32 };
+33 String temperatura [3] = {"C°","F°","K°"};
+34 int main(){//Inicio metodo principal
+35	int entrada;
+36	int salida;
+37	double valor_entrada;
+38	double resultado;
+39	String menu2[11] = {"Longitud","Area","Volumen","Masa","Velocidad","Densidad","Fuerza","Energia","Potencia","Presion","Temperatura"};
+40	int opcion;
+41
+42	for( int i = 0; i < 11; i++){
+43		printf("%d %s \n", i, menu2[i]);
+44	}
+45	printf("Digite su opcion: ");
+46	scanf("%d", &opcion);
+47
+48	if (opcion == 10){
+49		for (int i = 0; i < 3; i++){
+50              	printf("%d %s \n", i , temperatura[i]);
+51       }
+52	
+53       printf("Digite la unidad de entrada: ");
+54       scanf("%d", &entrada);
+55       printf("Digite la unidad de salida: ");
+56       scanf("%d", &salida);
+57       printf("Digite el valor numerico de entrada: ");
+58       scanf("%lf", &valor_entrada);
+59
+60       if ( (entrada == 0)&&(salida == 1)){
+61        resultado = (valor_entrada*1.8)+32;
+               	printf("%lf %s", resultado,"\n");
+          }
+          else if ((entrada == 0)&&(salida == 2)){
+          	resultado = valor_entrada + 273.15;
+                printf("%lf %s", resultado,"\n");
+          }
+          else if ( (entrada == 1)&&(salida == 0)){
+		resultado = (valor_entrada-32)*0.555555556;
+                printf("%lf %s", resultado,"\n");
+           }
+	  else if ((entrada == 1)&&(salida == 2)){
+          	resultado = (valor_entrada-32)*0.555555556+273.15;
+                printf("%lf %s", resultado,"\n");
+          }
+          else if ((entrada == 2)&&(salida == 0)){
+          	resultado = valor_entrada-273.15;
+               	printf("%lf %s", resultado,"\n");
+          }
+          else if ((entrada == 2)&&(salida == 1)){
+          	resultado = (valor_entrada-273.15)*1.8+32;
+                printf("%lf %s", resultado,"\n");
+          }
+       }
+       else {
+       		desprender_menu(opcion);
+         	printf("Unidad de entrada: ");
+                scanf("%d", &entrada);
+               	printf("Unidad de salida: ");
+               	scanf("%d", &salida);
+
+               	printf("Digite el valor numerico de entrada: ");
+                scanf("%lf", &valor_entrada);
+
+                resultado = (valores[opcion][salida] / valores[opcion][entrada])*valor_entrada;
+                printf("%lf %s", resultado, "\n");
+        }
+}//Fin metodo principal
+void desprender_menu(int valor){
+	for (int i = 0; i < 8; i++){
+        	printf("%d %s \n", i , nombres[valor][i]);
+	}
+}
+</pre>
+		
+				</div>
+				<div class="content">
+					<center><p>Digite su unidad de medida de entreda:
+                                		<select name="miSelect1" id="miSelect1">
+                                        		<option value="0">Milimetros
+                                        		<option value="1">Centimetros 
+                                        		<option value="2">Pulgadas
+							<option value="3">Pie
+							<option value="4">Yarda
+							<option value="5">Metro
+							<option value="6">Kilometro
+							<option value="7">Milla
+                                		</select>
+						<br/>
+						Digite el valor numerico de entrada:  <input type="text" id="unidad_entrada">
+						<br/>
+						Digite su unidad de medida de salida:
+						<select name="miSelect2" id="miSelect2">
+                                                	<option value="0">Milimetros
+                                                	<option value="1">Centimetros
+                                                	<option value="2">Pulgadas
+                                                	<option value="3">Pie
+                                                	<option value="4">Yarda
+                                                	<option value="5">Metro
+                                                	<option value="6">Kilometro
+                                                	<option value="7">Milla
+                                        	</select>
+						<br/>
+						<button type="button" onclick="Resultado();">Enviar</button>
+					</center>
+				</div>
+			
+			</article> <!-- /article -->
+	
+		</section> <!-- / #main-content -->
+
+	
+	
+		<footer id="main-footer">
+			<a href="https://www.youtube.com/watch?v=En4jap4MPbY">Agathe Mac</a></p>
+		</footer> <!-- / #main-footer -->
+
+		<script type="text/javascript">
+			function Resultado() {
+				var unidad = document.getElementById("unidad_entrada").value;
+				var valor_entrada = document.getElementById("miSelect1").value;
+				var valor_salida = document.getElementById("miSelect2").value;
+				var valores_1 = [1000,100,41.66,3.28083,1.09,0.001,0.0006215];
+				var valores_2 = [1000,100,41.66,3.28083,1.09,0.001,0.0006215];
+				var resultado;
+
+				resultado = (valores_1[valor_salida]/valores_2[valor_entrada])*unidad;
+				alert("El resultado de su conversion es: " + resultado);
+
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!--Fecha: 28_02_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Tema Estructuras cíclicas 
+1_EN EL TECNOLÓGICO DE JILOTEPEC SE REALIZARÁ UNA ENCUESTA, PARA CONOCER 
+MAYOR INFORMACIÓN DE LOS ALUMNOS Y VERIFICAR QUIENES DE ELLOS TIENEN O 
+HAN TENIDO ALGUNA DIFICULTAD DE CONECTIVIDAD.  PARA LO CUAL LES ESTAN 
+HACIENDO UN CUESTIONARIO CON LAS SIGUIENTES PREGUNTAS:
+ • TIENEN INTERNET EN CASA
+ • TIENEN COMPUTADORA EN CASA
+ • CUENTA CON LOS RECURSOS BÁSICOS NECESARIOS DE ALIMENTACION.
+2_RECOLECTA LOS DATOS Y PRESENTA LOS RESULTADOS CONSIDERANDO QUE SE 
+DESCONOCE LA CANTIDAD DE ALUMNOS. 
+3_IMPRIME LOS RESULTADOS CON NÚMEROS Y PORCENTAJES.-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Encuesta</title>
+	</head>
+		<form action="" id="action">
+			<label>¿Cuantos alumnos son?: <label>
+			<input type="text" name="numero" id="numero">
+			<button type="button" onclick="encuesta();">Enviar</button>
+		</form>
+	<body>
+	<script type="text/javascript">
+		function encuesta(){
+			var alumnos = document.getElementById("numero").value;
+			var porcentaje;
+			var alumnos;
+			var internet;
+			var internet_si;
+			var internet_no;
+			var computadora;
+			var computadora_si;
+			var continuar;
+			var compuatadora_no;
+			var alimentacion;
+			var alimentacion_si;
+			var alimentacion_no;
+			var porcentaje;
+			var conInternet = 0;
+			var sinInternet = 0;
+			var conComputadora = 0;
+			var sinComputadora = 0;
+			var alimentacion_mala = 0;
+			var alimentacion_buena = 0;
+
+			for (var i = 1; i <= alumnos; i++){
+				do{
+					opcion = parseInt(prompt("¿Cuenta con internet?\n1-Si\n0-No\nDigite su respuesta"));
+						if ( internet == 1 ){
+							conInternet = conInternet + 1;
+						}
+							else if ( internet == 0){
+								sinInternet = sinInternet + 1;
+							}
+
+					computadora = parseInt(prompt("¿Cuenta con computadora?\n1-Si\n0-No\nDigite su respuesta"));
+					if ( computadora == 1 ){
+                                                conComputadora = conComputadora + 1;
+                                        }
+                                                else if ( computadora == 0){
+                                                        sinComputadora = sinComputadora + 1;
+                                                }
+
+				alimentacion = parseInt(prompt("¿Cuenta con una buena alimentacion?\n1-Si\n0-No\nDigite su respuesta"));
+					if ( alimentacion == 1 ){
+                                                alimentacion_buena = alimentacion_buena + 1;
+                                        }
+                                               else if ( alimentacion == 0){
+                                                        alimentacion_mala = alimentacion_mala + 1;
+                                                }
+
+				continuar = parseInt("¿Que desea hacer?:\n1-Volver\n0)Salir");
+			}while (continuar == 1);
+		  }
+		  porcentaje = (100/alumnos);
+                  internet_si = porcentaje*conInternet;
+                  internet_no = porcentaje*sinInternet;
+                  computadora_si = porcentaje*conComputadora;
+                  computadora_no = porcentaje*sinComputadora;
+                  alimentacion_no = porcentaje*alimentacion_mala;
+                  alimentacion_si = porcentaje*alimentacion_buena;
+
+                                alert("La encuesta se hizo a " + alumnos );
+                                alert("Con internet, lo que corresponde a un: " + internet_si + " porciento");
+                                alert("Sin internet, lo que corresponde a un: " + internet_no + " porciento");
+                                alert("Con computadora, lo que corresponde a un: " + computadora_si + " porciento");
+                                alert("Sin computadora, lo que corresponde a un: " + computadora_no + " porciento");
+                                alert("Buena alimentacion, lo que corresponde a un: " + alimentacion_si + " porciento");
+                                alert("Mala alimentacion, lo que corresponde a un: " + alimentacion_no + " porciento");
+
+		}
+		</script>
+	</body>
+</html>

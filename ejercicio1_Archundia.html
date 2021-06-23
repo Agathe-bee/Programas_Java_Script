@@ -1,0 +1,86 @@
+<!--Fecha: 06_05_2021-->
+<!--Autor: Fátima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejercicio de selectores</title>
+		<style type="text/css">
+			/* No borrar la siguiente regla CSS porque es necesaria para ver los bordes de la tabla */
+			table, tr, th, td {border:1px solid #000; border-collapse:collapse; padding:5px;}
+
+			h1#titulo { color: teal; }
+
+			strong { color: red; }
+			span.destacado { color: orange; }
+
+			h2#subtitulo { color: blue; }
+
+			span.especial { color: purple; }
+
+			a { color: red; }
+			a em { color: blue; }
+
+			div#adicional p { color: olive; }
+			div#adicional span#especial { color: fuchsia; }
+			div#adicional a { color: green; }
+
+			caption { color: blue; }
+			td { color: green; }
+			td strong { color: orange; }
+			th { color: red; }
+			th.especial { color: orange; }
+		</style>
+	</head>
+
+	<body>
+		<h1 id="titulo">¿Por qué amo a BTS?</h1>
+
+		<p>Hay muchas razones para apreciar a estos chicos. <strong>bangtan sonyeondan</strong>,BTS es un grupo surcoreano formado en Seúl en 2010 y que debutó en 		  2013 bajo la compañía Big Hit.​ Está compuesto por siete integrantes: Jin, Suga, J-Hope, RM, Jimin, V y Jungkook, quienes coescriben y coproducen la 		    mayor parte de su material discográfico
+		La mayoria de sus canciones hablan sobre. <span class="destacado">"El amor propio"</span> con ritmos muy geniales.</p>
+
+		<h2 id="subtitulo">¿Cómo es que empezé a escucharlos?</h2>
+
+		<p>Todo comenzo cuando mi mejor amiga me mostro una canción titulada "RUN".  <a href="#">Quede fascinada con la canción<em> la letra era muy bonita</em>,y el 		 ritmo era bastante pegadiso</a>, cuando llegue a mi casa empeze a buscarlos y quede mas maravillada por semejantes canciones que tenian<span 
+		class="especial"></span>. A continuación mostraré una tabla con 2 canciones que más me gustan.</p>
+
+		<table summary="Descripción de la tabla y su contenido">
+			<caption>Canciones</caption>
+				<thead>
+
+					<tr>
+    						<th scope="col"></th>
+    						<th scope="col" class="especial">Significado</th>
+    						<th scope="col" class="especial">¿Por qué me gusta?</th>
+  					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+    						<th scope="row" class="especial">Just one day</th>
+    						<td>Just one day" es un single incluido en el álbum "SKOOL LUV AFFAIR", fue escrta por Suga y tiene un significado muy 
+						especial: valorar un día de vida para poder ser feliz, quizás con haciendo lo que más te gusta, estar al lado de tus seres 					          queridos o estar al lado de esa persona especial.</td>
+    						<td>Simplemente es <em>arte, su ritmo hace que tenga recuerdos con esas personas que dejarón un bonito recuerda.</em></td>
+  					</tr>
+  					<tr>
+    						<th scope="row">Black Swan</th>
+						<td>'Black Swan' hace referencia a la lucha interna de una persona que se ha acostumbrado a hacer lo que más le apasiona y 						  cómo el gusto que tenía por eso se ha ido por completo. ... Después del lanzamiento de 'Interlude: Shadow' y 'Black Swan', 						     ha quedado muy claro el nuevo concepto que BTS abordará en 'Map Of The Soul: 7'.
+						</td>
+    						<td>
+						Esta canción me gusta por la orquesta, la combinación de todos los instrumentos, mezclados con sus voces, es sin duda un 
+						arte, y a eso le agregamos la coreografía, es perfecta, ver como todos estan coordinados, es espectacular.
+						</td>
+  					</tr>
+				</tbody>
+		</table>
+
+	<div id="adicional">
+		<p>Sin duda hay mucho más canciones que me gustan, <span> puedo contar que hace poco, estuve en el BangBangCon</span>. Fue algo increible
+		Admito que llore, me da gusto verlos crecer, y estoy feliz de pertenecer al fandom.</p>
+
+		<p>Me hubiera gustado conocerlos desde se debut. <span id="especial">Son un grupo muy talentoso</span>, y sobre todo,
+		estan guapos, los amaré por siempre.</p>
+	</div>
+
+</body>
+</html>

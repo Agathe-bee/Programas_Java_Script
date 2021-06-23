@@ -1,0 +1,28 @@
+<!--Fecha: 02_06_2021-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM</title>
+	</head>
+	<body>
+		<h2> Screen </h2>
+
+		<!--Tabla de propiedades de screen-->
+		<table id="tabla">
+			<tr><th> Propiedad </th><th> Valor </th></tr>
+		</table>
+		<script type="text/javascript">
+			var i; 
+			var tabla = document.getElementById("tabla");
+
+			for (i in screen){ //Cada iteracion genera una fila de la tabla
+				tabla.innerHTML += "<tr><td>" + i + "</td><td> = " + screen[i] + "</td></tr>";
+			}
+		</script>
+	</body>
+</html>
+

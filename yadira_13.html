@@ -1,0 +1,79 @@
+<!--Fecha: 09_03_21-->
+<!--Autor: Fatima Azucena MC-->
+<!--Correo: fatimaazucenamartinez274@gmail.com-->
+
+<!--Solicitar la calificacion de las materias
+las suma y saca el promedio-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calificacion</title>
+	</head>
+	<body>
+		<form action=""	id="form">
+			<label>Nombre: </label>
+			<input type="text" name="name" id="name">
+			<br>
+			<label>Apellido Paterno: </label>
+                        <input type="text" name="aPaterno" id="aPaterno">
+                        <br>
+			<label>Apellido materno: </label>
+                        <input type="text" name="aMeterno" id="aMaterno">
+                        <br>
+			<label>Grupo: </label>
+                        <input type="text" name="group" id="group">
+                        <br>
+			<label>Carrera: </label>
+                        <input type="text" name="carrera" id="carrera">
+                        <br>
+			<label>Digite el nombre de la materia 1: </label>
+                        <input type="text" name="materia1" id="materia1">
+                        <br>
+			<label>Digite el nombre de la materia 2: </label>
+                        <input type="text" name="materia2" id="materia2">
+                        <br>
+			<label>Digite el nombre de la materia 3: </label>
+                        <input type="text" name="materia3" id="materia3">
+                        <br>
+			<button type="button" onclick="cali();">Enviar</button>
+		</form>
+		<script type="text/javascript">
+		function cali(){
+			var mat1 = document.getElementById("materia1").value;
+			var mat2 = document.getElementById("materia2").value;
+			var mat3 = document.getElementById("materia3").value;
+			var nombre = document.getElementById("name").value;
+			var suma1 = 0;
+			var suma2 = 0;
+			var suma3 = 0;
+			var suma_Promedios;
+
+			for (var i = 1; i <= 5; i++){
+				promedio1 = parseInt(prompt("Digite la calificacion de la unidad " + i + " en "+ mat1 +" (10-100): "));
+				suma1 = suma1 + promedio1;
+			}
+			suma1 = suma1 / 5;
+
+			for (var y = 1; y <= 5; y++){
+                                promedio2 = parseInt(prompt("Digite la calificacion de la unidad " + y + " en "+ mat2 +"(10-100): "));
+                                suma2 = suma2 + promedio1;
+                        }
+                        suma2 = suma2 / 5;
+
+			for (var x = 1; x <= 5; x++){
+                                promedio3 = parseInt(prompt("Digite la calificacion de la unidad " + x + " en "+ mat3 +"(10-100): "));
+                                suma3 = suma3 + promedio3;
+                        }
+                        suma3 = suma3 / 5;
+			suma_Promedios = (suma1 + suma2 + suma3)/3;
+		
+			alert("Hola " + nombre + " el promedio de las 5 unidades en la materia de " + mat1 +" es: " + suma1);
+			alert("Hola " + nombre + " el promedio de las 5 unidades en la materia de " + mat2 +" es: " + suma2);
+			alert("Hola " + nombre + " el promedio de las 5 unidades en la materia de " + mat3 +" es: " + suma3);
+			alert("El promedio  general es de: " + suma_Promedios);
+		}
+		</script>
+	</body>
+</html>
